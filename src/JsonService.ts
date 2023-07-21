@@ -53,6 +53,7 @@ export class JsonService {
             return await fetch(input, initFetch);
         }
 
+        delete init.credentials;
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeoutInSeconds * 1000);
 

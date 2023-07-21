@@ -1,12 +1,12 @@
 {
-  "name": "oidc-client-ts",
+  "name": "@randomairborne/worker-oidc-client-ts",
   "version": "2.2.4",
   "description": "OpenID Connect (OIDC) & OAuth2 client library",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:authts/oidc-client-ts.git"
+    "url": "git+https://github.com:randomairborne/worker-oidc-client-ts.git"
   },
-  "homepage": "https://github.com/authts/oidc-client-ts#readme",
+  "homepage": "https://github.com/randomairborne/worker-oidc-client-ts#readme",
   "license": "Apache-2.0",
   "main": "dist/umd/oidc-client-ts.js",
   "types": "dist/types/oidc-client-ts.d.ts",
@@ -26,7 +26,8 @@
     "oauth2",
     "oidc",
     "openid",
-    "OpenID Connect"
+    "OpenID Connect",
+    "workers"
   ],
   "scripts": {
     "build": "node scripts/build.js && npm run build-types",
