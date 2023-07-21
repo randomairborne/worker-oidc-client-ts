@@ -49,11 +49,10 @@ export class JsonService {
 
     protected async fetchWithTimeout(input: RequestInfo, init: RequestInit & { timeoutInSeconds?: number } = {}) {
         const { timeoutInSeconds, ...initFetch } = init;
+        delete init.credentials;
         if (!timeoutInSeconds) {
             return await fetch(input, initFetch);
         }
-
-        delete init.credentials;
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeoutInSeconds * 1000);
 
